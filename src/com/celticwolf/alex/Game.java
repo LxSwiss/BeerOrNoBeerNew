@@ -111,7 +111,7 @@ public class Game extends SherlockActivity implements View.OnClickListener {
         //test mode on DEVICE (this example code must be replaced with your device uniquq ID)
         //adRequest.addTestDevice("4G74FC73D62D42B62A7F7DA61EF5F776");
  
-      //  adView = (AdView)findViewById(R.id.adMob); 
+       adView = (AdView)findViewById(R.id.adMob); 
  
         // Initiate a request to load an ad in test mode.
         // You can keep this even when you release your app on the market, because
@@ -120,7 +120,7 @@ public class Game extends SherlockActivity implements View.OnClickListener {
 		
 	}
 	
-/*	private void checkAd(int Score) {
+	private void checkAd(int Score) {
 		if(Score >= adKill ){
 
 			View admobAds = (View) findViewById(R.id.adMob);
@@ -130,7 +130,7 @@ public class Game extends SherlockActivity implements View.OnClickListener {
 		
 		
 		
-	}*/
+	}
 
 	private void getStrings() {
 		txthighscore = getResources().getString(R.string.txthighscore);
@@ -165,7 +165,7 @@ public class Game extends SherlockActivity implements View.OnClickListener {
 		setbrand.setText("" + anybeer);
 		setbrand.setTextColor(Color.WHITE);
 		setBeerFlag();
-		//loadAd();
+		loadAd();
 
 	}
 	private void getDatabase() {
@@ -248,7 +248,7 @@ public class Game extends SherlockActivity implements View.OnClickListener {
 	private void sethighscore() {
 		if (drinkcount >= highscore) {
 			highscore = drinkcount;
-	//		checkAd(drinkcount);
+		checkAd(drinkcount);
 		}
 	}
 
@@ -674,7 +674,7 @@ public class Game extends SherlockActivity implements View.OnClickListener {
 			return true;
 			
 		case android.R.id.home:
-			Intent intent = new Intent(this, Menu.class);
+			Intent intent = new Intent(this, com.celticwolf.alex.Menu.class);
             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
             startActivity(intent);
             return true;

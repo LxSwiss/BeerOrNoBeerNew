@@ -15,7 +15,6 @@ public class Menu extends SherlockActivity implements View.OnClickListener{
 	Button start,  about, sendbeer, banner;
 	
 	
-
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -62,7 +61,7 @@ private void about() {
 		
 	}
 
-private void sendbeer(){
+public void sendbeer(){
 	Intent gosendbeer  = new Intent("com.celticwolf.alex.SENDBRAND");
 	startActivity(gosendbeer);
 }

@@ -9,8 +9,6 @@ import android.os.Bundle;
 //import android.view.Menu;
 //import android.view.MenuInflater;
 import android.view.View;
-import android.support.v4.app.FragmentActivity;
-import com.actionbarsherlock.app.ActionBar;
 import com.actionbarsherlock.app.SherlockActivity;
 import com.actionbarsherlock.view.Menu;
 import com.actionbarsherlock.view.MenuItem;
@@ -33,6 +31,7 @@ public class About extends SherlockActivity implements View.OnClickListener{
 		return true;
 	}
 
+	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
 		switch (item.getItemId()) {
 		case R.id.item1:
@@ -43,7 +42,7 @@ public class About extends SherlockActivity implements View.OnClickListener{
 			return true;
 		
 		case android.R.id.home:
-			Intent intent = new Intent(this, Menu.class);
+			Intent intent = new Intent(this, com.celticwolf.alex.Menu.class);
 	        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
 	        startActivity(intent);
 	        return true;

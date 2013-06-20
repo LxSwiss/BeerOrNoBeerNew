@@ -64,7 +64,7 @@
         android:paddingBottom="20dp"
         android:src="@drawable/blanktwo" />
 
-     <!-- <LinearLayout
+      <LinearLayout
         android:id="@+id/adsContainer"
         android:layout_width="fill_parent"
         android:layout_height="50dip" >
@@ -77,7 +77,7 @@
                            ads:adSize="SMART_BANNER"/> 
         
 
-    </LinearLayout>  --> 
+    </LinearLayout>   
 
     <LinearLayout
         android:id="@+id/llButtonHorizontal"

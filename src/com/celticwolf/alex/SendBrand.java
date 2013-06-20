@@ -4,8 +4,6 @@ package com.celticwolf.alex;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
-import android.support.v4.app.FragmentActivity;
-import com.actionbarsherlock.app.ActionBar;
 import com.actionbarsherlock.app.SherlockActivity;
 import com.actionbarsherlock.view.Menu;
 import com.actionbarsherlock.view.MenuItem;
@@ -15,7 +13,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
-import android.widget.RadioGroup;
 import android.widget.Toast;
 
 public class SendBrand  extends SherlockActivity implements View.OnClickListener{
@@ -27,7 +24,6 @@ public class SendBrand  extends SherlockActivity implements View.OnClickListener
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
-		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.sendbeer);
 		initialize();
@@ -93,7 +89,7 @@ public class SendBrand  extends SherlockActivity implements View.OnClickListener
 	public boolean onOptionsItemSelected(MenuItem item) {
 		switch (item.getItemId()) {
 		case android.R.id.home:
-			Intent intent = new Intent(this, Menu.class);
+			Intent intent = new Intent(this, com.celticwolf.alex.Menu.class);
 	        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
 	        startActivity(intent);
 	        return true;
@@ -122,7 +118,7 @@ public class SendBrand  extends SherlockActivity implements View.OnClickListener
 		i.setData(Uri.parse(url));
 		startActivity(i);
 	}
-	private void convertEditTextvars() {
+	/*private void convertEditTextvars() {
 		String emailaddress[] = {"lxswiss@gmail.com"};
 		sbrandname = brandname.getText().toString();
 		scountry = country.getText().toString();
@@ -136,7 +132,7 @@ public class SendBrand  extends SherlockActivity implements View.OnClickListener
 		emailIntent.putExtra(android.content.Intent.EXTRA_TEXT, message);
 		startActivity(emailIntent);
 		
-	}
+	}*/
 	private void shareonfb(){
 		sbrandname = brandname.getText().toString();
 		scountry = country.getText().toString();

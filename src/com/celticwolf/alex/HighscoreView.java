@@ -71,7 +71,7 @@ public class HighscoreView extends SherlockActivity implements View.OnClickListe
 			return true;
 		
 		case android.R.id.home:
-			Intent intent = new Intent(this, Menu.class);
+			Intent intent = new Intent(this, com.celticwolf.alex.Menu.class);
 	        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
 	        startActivity(intent);
 	        return true;
