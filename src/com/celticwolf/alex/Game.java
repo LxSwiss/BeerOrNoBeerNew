@@ -12,19 +12,16 @@ import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Color;
-import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
 import android.util.Log;
-import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 
 import com.actionbarsherlock.app.SherlockActivity;
@@ -69,7 +66,7 @@ public class Game extends SherlockActivity implements View.OnClickListener {
 	final int drinkfactor_half = 1;
 	final int drinkfactor_normal = 2;
 	final int drinkfactor_double = 3;
-	private final int adKill = 6;
+	private final int adKill = 9;
 	int drinkfactor = drinkfactor_normal;
 	int selectedBeer;
 	String anybeer;
@@ -248,7 +245,7 @@ public class Game extends SherlockActivity implements View.OnClickListener {
 	private void sethighscore() {
 		if (drinkcount >= highscore) {
 			highscore = drinkcount;
-		checkAd(drinkcount);
+			checkAd(drinkcount);
 		}
 	}
 

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:ads="http://schemas.android.com/apk/lib/com.google.ads"
+    xmlns:mad="http://schemas.android.com/apk/res/com.celticwolf.alex"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/menu_dimback"
@@ -64,13 +65,14 @@
         android:paddingBottom="20dp"
         android:src="@drawable/blanktwo" />
 
-      <LinearLayout
+       <LinearLayout
         android:id="@+id/adsContainer"
         android:layout_width="fill_parent"
         android:layout_height="50dip" >
 
         
-              <com.google.ads.AdView android:layout_width="fill_parent"
+              <com.google.ads.AdView 
+                  			android:layout_width="fill_parent"
                            android:layout_height="wrap_content"
                            android:id="@+id/adMob"
                            ads:adUnitId="a150855c0feb1fd"
@@ -79,6 +81,22 @@
 
     </LinearLayout>   
 
+ <!--
+ <LinearLayout
+        android:id="@+id/adsContainer"
+        android:layout_width="fill_parent"
+        android:layout_height="50dip" >
+
+     
+     <de.madvertise.android.sdk.MadvertiseView
+		android:id="@+id/madad"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		mad:bannerType="mma"
+		mad:placement_type="inline"/>
+
+ </LinearLayout>   
+-->
     <LinearLayout
         android:id="@+id/llButtonHorizontal"
         android:layout_width="wrap_content"

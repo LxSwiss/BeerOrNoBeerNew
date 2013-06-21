@@ -148,12 +148,29 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static final int activityChooserViewStyle=0x7f010058;
+        /** <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int animation=0x7f01007b;
         /** <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
 <p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
          */
         public static final int background=0x7f010014;
+        /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int backgroundColor=0x7f010075;
         /** <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
 <p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
@@ -167,6 +184,14 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
          */
         public static final int backgroundStacked=0x7f010061;
+        /** <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int bannerType=0x7f010079;
         /**  Small Button style. 
          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
@@ -185,6 +210,14 @@ containing a value of this type.
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static final int customNavigationLayout=0x7f010062;
+        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int deliverOnlyText=0x7f01007a;
         /**  Options affecting how the action bar is displayed. 
          <p>Must be one or more (separated by '|') of the following constant values.</p>
 <table>
@@ -333,6 +366,14 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
+        public static final int isTestMode=0x7f010078;
+        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
         public static final int is_cropped=0x7f010011;
         /**  Default background for each menu item. 
          <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
@@ -432,6 +473,14 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
+        public static final int mraid=0x7f01007d;
+        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
         public static final int multi_select=0x7f010007;
         /**  The type of navigation to use. 
          <p>Must be one of the following constant values.</p>
@@ -446,6 +495,14 @@ containing a value of this type.
 </table>
          */
         public static final int navigationMode=0x7f01005b;
+        /** <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int placement_type=0x7f01007c;
         /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
@@ -581,6 +638,14 @@ theme attribute (in the form
 containing a value of this type.
          */
         public static final int search_text=0x7f01000a;
+        /** <p>Must be an integer value, such as "<code>100</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int secondsToRefresh=0x7f010074;
         /**  Background drawable for standalone items that need focus/pressed states. 
          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
@@ -669,6 +734,15 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
+        public static final int textColor=0x7f010077;
+        /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
         public static final int textColorPrimary=0x7f010031;
         /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
@@ -695,6 +769,14 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
          */
         public static final int textColorSearchUrl=0x7f010040;
+        /** <p>Must be an integer value, such as "<code>100</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int textSize=0x7f010076;
         /**  Specifies title text used for navigationMode="normal" 
          <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
 <p>This may also be a reference to a resource (in the form
@@ -1172,49 +1254,46 @@ containing a value of this type.
         public static final int greece=0x7f0200de;
         public static final int guatemala=0x7f0200df;
         public static final int ic_launcher=0x7f0200e0;
-        public static final int ic_menu_back=0x7f0200e1;
-        public static final int ic_menu_forward=0x7f0200e2;
-        public static final int ic_menu_refresh=0x7f0200e3;
-        public static final int iceland=0x7f0200e4;
-        public static final int india=0x7f0200e5;
-        public static final int ireland=0x7f0200e6;
-        public static final int italy=0x7f0200e7;
-        public static final int jamaica=0x7f0200e8;
-        public static final int japan=0x7f0200e9;
-        public static final int kenya=0x7f0200ea;
-        public static final int main_wallsign=0x7f0200eb;
-        public static final int menu_blankbutton=0x7f0200ec;
-        public static final int menu_blankbuttonclick=0x7f0200ed;
-        public static final int menu_blankbuttonhow=0x7f0200ee;
-        public static final int menu_dimback=0x7f0200ef;
-        public static final int menu_dimbackblank=0x7f0200f0;
-        public static final int menu_logo2=0x7f0200f1;
-        public static final int mexico=0x7f0200f2;
-        public static final int mongolia=0x7f0200f3;
-        public static final int morocco=0x7f0200f4;
-        public static final int nepal=0x7f0200f5;
-        public static final int netherland=0x7f0200f6;
-        public static final int peru=0x7f0200f7;
-        public static final int poland=0x7f0200f8;
-        public static final int portugal=0x7f0200f9;
-        public static final int resrigth2=0x7f0200fa;
-        public static final int reswrong2=0x7f0200fb;
-        public static final int russia=0x7f0200fc;
-        public static final int schuegabutton=0x7f0200fd;
-        public static final int schuegaglass=0x7f0200fe;
-        public static final int scotland=0x7f0200ff;
-        public static final int singapur=0x7f020100;
-        public static final int southafrica=0x7f020101;
-        public static final int spain=0x7f020102;
-        public static final int speakeron=0x7f020103;
-        public static final int splash_croneloogo=0x7f020104;
-        public static final int sweden=0x7f020105;
-        public static final int swissflag=0x7f020106;
-        public static final int tahiti=0x7f020107;
-        public static final int tasmain=0x7f020108;
-        public static final int thailand=0x7f020109;
-        public static final int tibet=0x7f02010a;
-        public static final int venezuela=0x7f02010b;
+        public static final int iceland=0x7f0200e1;
+        public static final int india=0x7f0200e2;
+        public static final int ireland=0x7f0200e3;
+        public static final int italy=0x7f0200e4;
+        public static final int jamaica=0x7f0200e5;
+        public static final int japan=0x7f0200e6;
+        public static final int kenya=0x7f0200e7;
+        public static final int main_wallsign=0x7f0200e8;
+        public static final int menu_blankbutton=0x7f0200e9;
+        public static final int menu_blankbuttonclick=0x7f0200ea;
+        public static final int menu_blankbuttonhow=0x7f0200eb;
+        public static final int menu_dimback=0x7f0200ec;
+        public static final int menu_dimbackblank=0x7f0200ed;
+        public static final int menu_logo2=0x7f0200ee;
+        public static final int mexico=0x7f0200ef;
+        public static final int mongolia=0x7f0200f0;
+        public static final int morocco=0x7f0200f1;
+        public static final int nepal=0x7f0200f2;
+        public static final int netherland=0x7f0200f3;
+        public static final int peru=0x7f0200f4;
+        public static final int poland=0x7f0200f5;
+        public static final int portugal=0x7f0200f6;
+        public static final int resrigth2=0x7f0200f7;
+        public static final int reswrong2=0x7f0200f8;
+        public static final int russia=0x7f0200f9;
+        public static final int schuegabutton=0x7f0200fa;
+        public static final int schuegaglass=0x7f0200fb;
+        public static final int scotland=0x7f0200fc;
+        public static final int singapur=0x7f0200fd;
+        public static final int southafrica=0x7f0200fe;
+        public static final int spain=0x7f0200ff;
+        public static final int speakeron=0x7f020100;
+        public static final int splash_croneloogo=0x7f020101;
+        public static final int sweden=0x7f020102;
+        public static final int swissflag=0x7f020103;
+        public static final int tahiti=0x7f020104;
+        public static final int tasmain=0x7f020105;
+        public static final int thailand=0x7f020106;
+        public static final int tibet=0x7f020107;
+        public static final int venezuela=0x7f020108;
     }
     public static final class id {
         public static final int FacebookShareButton=0x7f05004c;
@@ -1396,7 +1475,6 @@ containing a value of this type.
     public static final class raw {
         public static final int bottleopen=0x7f040000;
         public static final int buzzer=0x7f040001;
-        public static final int mraid=0x7f040002;
     }
     public static final class string {
         public static final int about=0x7f06002a;
@@ -4077,5 +4155,180 @@ containing a value of this type.
           @attr name android:preset_size
         */
         public static final int com_facebook_profile_picture_view_preset_size = 0;
+        /** Attributes that can be used with a de_madvertise_android_sdk_MadView.
+           <p>Includes the following attributes:</p>
+           <table>
+           <colgroup align="left" />
+           <colgroup align="left" />
+           <tr><th>Attribute</th><th>Description</th></tr>
+           <tr><td><code>{@link #de_madvertise_android_sdk_MadView_animation com.celticwolf.alex:animation}</code></td><td></td></tr>
+           <tr><td><code>{@link #de_madvertise_android_sdk_MadView_backgroundColor com.celticwolf.alex:backgroundColor}</code></td><td></td></tr>
+           <tr><td><code>{@link #de_madvertise_android_sdk_MadView_bannerType com.celticwolf.alex:bannerType}</code></td><td></td></tr>
+           <tr><td><code>{@link #de_madvertise_android_sdk_MadView_deliverOnlyText com.celticwolf.alex:deliverOnlyText}</code></td><td></td></tr>
+           <tr><td><code>{@link #de_madvertise_android_sdk_MadView_isTestMode com.celticwolf.alex:isTestMode}</code></td><td></td></tr>
+           <tr><td><code>{@link #de_madvertise_android_sdk_MadView_mraid com.celticwolf.alex:mraid}</code></td><td></td></tr>
+           <tr><td><code>{@link #de_madvertise_android_sdk_MadView_placement_type com.celticwolf.alex:placement_type}</code></td><td></td></tr>
+           <tr><td><code>{@link #de_madvertise_android_sdk_MadView_secondsToRefresh com.celticwolf.alex:secondsToRefresh}</code></td><td></td></tr>
+           <tr><td><code>{@link #de_madvertise_android_sdk_MadView_textColor com.celticwolf.alex:textColor}</code></td><td></td></tr>
+           <tr><td><code>{@link #de_madvertise_android_sdk_MadView_textSize com.celticwolf.alex:textSize}</code></td><td></td></tr>
+           </table>
+           @see #de_madvertise_android_sdk_MadView_animation
+           @see #de_madvertise_android_sdk_MadView_backgroundColor
+           @see #de_madvertise_android_sdk_MadView_bannerType
+           @see #de_madvertise_android_sdk_MadView_deliverOnlyText
+           @see #de_madvertise_android_sdk_MadView_isTestMode
+           @see #de_madvertise_android_sdk_MadView_mraid
+           @see #de_madvertise_android_sdk_MadView_placement_type
+           @see #de_madvertise_android_sdk_MadView_secondsToRefresh
+           @see #de_madvertise_android_sdk_MadView_textColor
+           @see #de_madvertise_android_sdk_MadView_textSize
+         */
+        public static final int[] de_madvertise_android_sdk_MadView = {
+            0x7f010074, 0x7f010075, 0x7f010076, 0x7f010077,
+            0x7f010078, 0x7f010079, 0x7f01007a, 0x7f01007b,
+            0x7f01007c, 0x7f01007d
+        };
+        /**
+          <p>This symbol is the offset where the {@link com.celticwolf.alex.R.attr#animation}
+          attribute's value can be found in the {@link #de_madvertise_android_sdk_MadView} array.
+
+
+          <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name android:animation
+        */
+        public static final int de_madvertise_android_sdk_MadView_animation = 7;
+        /**
+          <p>This symbol is the offset where the {@link com.celticwolf.alex.R.attr#backgroundColor}
+          attribute's value can be found in the {@link #de_madvertise_android_sdk_MadView} array.
+
+
+          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name android:backgroundColor
+        */
+        public static final int de_madvertise_android_sdk_MadView_backgroundColor = 1;
+        /**
+          <p>This symbol is the offset where the {@link com.celticwolf.alex.R.attr#bannerType}
+          attribute's value can be found in the {@link #de_madvertise_android_sdk_MadView} array.
+
+
+          <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name android:bannerType
+        */
+        public static final int de_madvertise_android_sdk_MadView_bannerType = 5;
+        /**
+          <p>This symbol is the offset where the {@link com.celticwolf.alex.R.attr#deliverOnlyText}
+          attribute's value can be found in the {@link #de_madvertise_android_sdk_MadView} array.
+
+
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name android:deliverOnlyText
+        */
+        public static final int de_madvertise_android_sdk_MadView_deliverOnlyText = 6;
+        /**
+          <p>This symbol is the offset where the {@link com.celticwolf.alex.R.attr#isTestMode}
+          attribute's value can be found in the {@link #de_madvertise_android_sdk_MadView} array.
+
+
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name android:isTestMode
+        */
+        public static final int de_madvertise_android_sdk_MadView_isTestMode = 4;
+        /**
+          <p>This symbol is the offset where the {@link com.celticwolf.alex.R.attr#mraid}
+          attribute's value can be found in the {@link #de_madvertise_android_sdk_MadView} array.
+
+
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name android:mraid
+        */
+        public static final int de_madvertise_android_sdk_MadView_mraid = 9;
+        /**
+          <p>This symbol is the offset where the {@link com.celticwolf.alex.R.attr#placement_type}
+          attribute's value can be found in the {@link #de_madvertise_android_sdk_MadView} array.
+
+
+          <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name android:placement_type
+        */
+        public static final int de_madvertise_android_sdk_MadView_placement_type = 8;
+        /**
+          <p>This symbol is the offset where the {@link com.celticwolf.alex.R.attr#secondsToRefresh}
+          attribute's value can be found in the {@link #de_madvertise_android_sdk_MadView} array.
+
+
+          <p>Must be an integer value, such as "<code>100</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name android:secondsToRefresh
+        */
+        public static final int de_madvertise_android_sdk_MadView_secondsToRefresh = 0;
+        /**
+          <p>This symbol is the offset where the {@link com.celticwolf.alex.R.attr#textColor}
+          attribute's value can be found in the {@link #de_madvertise_android_sdk_MadView} array.
+
+
+          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name android:textColor
+        */
+        public static final int de_madvertise_android_sdk_MadView_textColor = 3;
+        /**
+          <p>This symbol is the offset where the {@link com.celticwolf.alex.R.attr#textSize}
+          attribute's value can be found in the {@link #de_madvertise_android_sdk_MadView} array.
+
+
+          <p>Must be an integer value, such as "<code>100</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name android:textSize
+        */
+        public static final int de_madvertise_android_sdk_MadView_textSize = 2;
     };
 }
