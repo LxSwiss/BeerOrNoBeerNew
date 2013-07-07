@@ -122,6 +122,8 @@ public final class R {
 		public static final int com_facebook_placepickerfragment_list_row = 0x7f030021;
 		public static final int com_facebook_usersettingsfragment = 0x7f030022;
 	}
+	public static final class raw {
+	}
 	public static final class string {
 		public static final int com_facebook_choose_friends = 0x7f06000f;
 		public static final int com_facebook_dialogloginactivity_ok_button = 0x7f060000;

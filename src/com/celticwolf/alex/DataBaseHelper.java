@@ -1,5 +1,6 @@
 package com.celticwolf.alex;
 
+import java.io.File;
 import java.io.FileOutputStream;
 
 import java.io.IOException;
@@ -33,7 +34,7 @@ public class DataBaseHelper extends SQLiteOpenHelper {
 	private static String DB_NAME = "sqlbeerlist.sqlite";
 
 	private static final String DATABASE_TABLE_BEERS = "beers";
-	
+
 	private static final String DATABASE_TABLE_NOBEERS = "nobeers";
 
 	private SQLiteDatabase myDataBase;
@@ -43,9 +44,9 @@ public class DataBaseHelper extends SQLiteOpenHelper {
 	public static final String KEY_NAME = "brand";
 
 	public static final String KEY_COUNTRY = "country";
-	
+
 	public static final String KEY_NONAME = "fakebrand";
-	
+
 	public static final String KEY_NOCOUNTRY = "nobeercountry";
 
 	private final Context myContext;
@@ -253,7 +254,7 @@ public class DataBaseHelper extends SQLiteOpenHelper {
 		return result;
 
 	}
-	
+
 	public ArrayList<String> getnobeers() {
 		ArrayList<String> result = new ArrayList<String>();
 		try {
@@ -273,7 +274,7 @@ public class DataBaseHelper extends SQLiteOpenHelper {
 		close();
 		return result;
 	}
-	
+
 	public ArrayList<String> getnobeercountries() {
 		ArrayList<String> result = new ArrayList<String>();
 		try {
@@ -316,5 +317,4 @@ public class DataBaseHelper extends SQLiteOpenHelper {
 	// be easy
 
 	// to you to create adapters for your views.
-
 }
