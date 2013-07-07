@@ -23,7 +23,6 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-
 import com.actionbarsherlock.app.SherlockActivity;
 import com.actionbarsherlock.view.Menu;
 import com.actionbarsherlock.view.MenuInflater;
@@ -173,6 +172,8 @@ public class Game extends SherlockActivity implements View.OnClickListener {
 		} catch (IOException ioe) {
 			throw new Error("Unable to create database");
 		}
+		
+		//beers = myDbHelper.getContent("DATABASE_TABLE_BEERS","brand");
 		beers = myDbHelper.getbeers();
 		beercountry = myDbHelper.getcountries();
 		nobeercountry = myDbHelper.getnobeercountries();

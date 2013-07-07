@@ -1,32 +1,17 @@
 package com.celticwolf.alex;
 
 
-import java.io.BufferedInputStream;
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileOutputStream;
 import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.io.OutputStream;
-import java.net.URL;
-import java.net.URLConnection;
-
-import org.apache.http.HttpResponse;
-import org.apache.http.client.methods.HttpGet;
-import org.apache.http.impl.client.DefaultHttpClient;
-import org.apache.http.util.ByteArrayBuffer;
 
 import android.content.Intent;
 import android.net.Uri;
-import android.os.AsyncTask;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+
 import com.actionbarsherlock.app.SherlockActivity;
-import com.actionbarsherlock.view.MenuItem;
 import com.actionbarsherlock.view.MenuInflater;
+import com.actionbarsherlock.view.MenuItem;
 
 public class Menu extends SherlockActivity implements View.OnClickListener{
 	
@@ -49,7 +34,18 @@ public class Menu extends SherlockActivity implements View.OnClickListener{
 		sendbeer.setOnClickListener(this);
 		banner.setOnClickListener(this);
 		AppRater.app_launched(this);
+		createDatabase();
 	
+	}
+
+	private void createDatabase() {
+		DataBaseHelper myDbHelper = new DataBaseHelper(null);
+		myDbHelper = new DataBaseHelper(this);
+		try {
+			myDbHelper.createDataBase();
+		} catch (IOException ioe) {
+			throw new Error("Unable to create database");
+		}
 	}
 
 	public void onClick(View v) {
@@ -74,13 +70,9 @@ private void openWebsite() {
 	}
 
 private void about() {
-	/*Intent goabout  = new Intent("com.celticwolf.alex.ABOUT");
-	startActivity(goabout);*/
-	DownloadWebPageTask task = new DownloadWebPageTask();
-	task.execute(new String[] { "http://schmidt-mathias.ch/Alex/sqlbeerlist.sqlite" });
-    //task.doInBackground( "http://schmidt-mathias.ch/Alex/sqlbeerlist.sqlite");
+	Intent goabout  = new Intent("com.celticwolf.alex.ABOUT");
+	startActivity(goabout);
 
-		
 	}
 
 public void sendbeer(){
@@ -135,79 +127,4 @@ public void sendbeer(){
 		startActivity(i);
 	}
 	
-	  public class DownloadWebPageTask extends AsyncTask<String, Void, String> {
-		    @Override
-		    protected String doInBackground(String... urls) {
-		      String response = "";
-		      String DB_PATH = "/data/data/com.celticwolf.alex/databases/";
-		      String DB_NAME = "sqlbeerlist.sqlite";
-		     
-		  	try {
-                URL url = new URL("http://schmidt-mathias.ch/Alex/sqlbeerlist.sqlite"); //you can write here any link
-                File file = new File("sqlbeerlist.sqlite");
-
-                long startTime = System.currentTimeMillis();
-                Log.d("ImageManager", "download begining");
-                Log.d("ImageManager", "download url:" + url);
-                Log.d("ImageManager", "downloaded file name:" + "sqlbeerlist.sqlite");
-                /* Open a connection to that URL. */
-                URLConnection ucon = url.openConnection();
-
-                /*
-                 * Define InputStreams to read from the URLConnection.
-                 */
-                InputStream is = ucon.getInputStream();
-                BufferedInputStream bis = new BufferedInputStream(is);
-                /*
-                 * Read bytes to the Buffer until there is nothing more to read(-1).
-                 */
-                ByteArrayBuffer baf = new ByteArrayBuffer(50);
-                int current = 0;
-                while ((current = bis.read()) != -1) {
-                        baf.append((byte) current);
-                }
-
-                /* Convert the Bytes read to a String. 
-                FileOutputStream fos = new FileOutputStream(file);
-                fos.write(baf.toByteArray());
-                fos.close();
-                Log.d("ImageManager", "download ready in"
-                                + ((System.currentTimeMillis() - startTime) / 1000)
-                                + " sec");*/
-
-               //FileOutputStream fos = new FileOutputStream(file);
-                
-                
-                String outFileName = DB_PATH + DB_NAME;
-        		OutputStream myOutput = new FileOutputStream(outFileName);
-
-        		// transfer bytes from the inputfile to the outputfile
-
-        		byte[] buffer = new byte[1024];
-
-        		int length;
-
-        		while ((length = is.read(buffer)) > 0) {
-
-        			myOutput.write(buffer, 0, length);
-
-        		}
-
-        		// Close the streams
-
-        		myOutput.flush();
-
-        		myOutput.close();
-
-        		is.close();
-
-
-        } catch (IOException e) {
-                Log.d("ImageManager", "Error: " + e);
-        }
-		      return response;
-		    }
-	
-	
-	  }
 }

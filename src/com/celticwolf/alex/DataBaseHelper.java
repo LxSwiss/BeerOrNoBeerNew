@@ -1,33 +1,24 @@
 package com.celticwolf.alex;
 
-import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileOutputStream;
-
 import java.io.IOException;
-
 import java.io.InputStream;
-
 import java.io.OutputStream;
-
 import java.util.ArrayList;
 
 import android.content.Context;
-
 import android.database.Cursor;
-
 import android.database.SQLException;
-
 import android.database.sqlite.SQLiteDatabase;
-
-import android.database.sqlite.SQLiteDatabase.CursorFactory;
-
 import android.database.sqlite.SQLiteException;
-
 import android.database.sqlite.SQLiteOpenHelper;
 
 public class DataBaseHelper extends SQLiteOpenHelper {
 
 	// The Android's default system path of your application database.
+	
+	private static String DB_URL = "http://schmidt-mathias.ch/Alex/sqlbeerlist.sqlite";
 
 	private static String DB_PATH = "/data/data/com.celticwolf.alex/databases/";
 
@@ -154,8 +145,10 @@ public class DataBaseHelper extends SQLiteOpenHelper {
 	private void copyDataBase() throws IOException {
 
 		// Open your local db as the input stream
+		downloadDatabase(DB_URL);
 
-		InputStream myInput = myContext.getAssets().open(DB_NAME);
+		//InputStream myInput = myContext.getAssets().open(DB_NAME);
+		InputStream myInput = new FileInputStream("/sdcard/"+DB_NAME);
 
 		// Path to the just created empty db
 
@@ -211,6 +204,26 @@ public class DataBaseHelper extends SQLiteOpenHelper {
 		super.close();
 
 	}
+	/*
+	public ArrayList<String> getContent(String sTable, String sColumn) {
+		ArrayList<String> result = new ArrayList<String>();
+		try {
+			openDataBase();
+		} catch (SQLException sqle) {
+			throw sqle;
+		}
+		Cursor c = myDataBase.rawQuery("SELECT _id, "+sColumn+" FROM " + sTable, null);
+		c.moveToFirst();
+		// Check if our result was valid.
+		if (c != null) {
+			// Loop through all Results
+			do {
+				result.add(c.getString(c.getColumnIndex(KEY_NAME)));
+			} while (c.moveToNext());
+		}
+		close();
+		return result;
+	}*/
 
 	public ArrayList<String> getbeers() {
 		ArrayList<String> result = new ArrayList<String>();
@@ -306,6 +319,11 @@ public class DataBaseHelper extends SQLiteOpenHelper {
 	@Override
 	public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
 
+	}
+	
+	public void downloadDatabase(String sUrl){
+		DownloadWebPageTask task = new DownloadWebPageTask();
+		task.execute(new String[] { sUrl });
 	}
 
 	// Add your public helper methods to access and get content from the
