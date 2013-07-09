@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:ads="http://schemas.android.com/apk/lib/com.google.ads"
     xmlns:mad="http://schemas.android.com/apk/res/com.celticwolf.alex"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/menu_dimback"
     android:orientation="vertical" >
 
+    
     <RelativeLayout
         android:id="@+id/relativeLayout1"
         android:layout_width="wrap_content"
@@ -64,7 +64,7 @@
         android:layout_centerHorizontal="true"
         android:paddingBottom="20dp"
         android:src="@drawable/blanktwo" />
-
+ <!--
        <LinearLayout
         android:id="@+id/adsContainer"
         android:layout_width="fill_parent"
@@ -79,24 +79,29 @@
                            ads:adSize="SMART_BANNER"/> 
         
 
-    </LinearLayout>   
+    </LinearLayout>   -->
 
- <!--
+ 
  <LinearLayout
         android:id="@+id/adsContainer"
         android:layout_width="fill_parent"
-        android:layout_height="50dip" >
+        android:layout_height="53dip"
+        android:orientation="vertical" >
 
-     
-     <de.madvertise.android.sdk.MadvertiseView
+   <de.madvertise.android.sdk.MadvertiseView
 		android:id="@+id/madad"
-		android:layout_width="fill_parent"
-		android:layout_height="wrap_content"
+		android:layout_width="320dip"
+		android:layout_height="53dip"
 		mad:bannerType="mma"
 		mad:placement_type="inline"/>
+<ListView
+		android:id="@+id/country_list"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:background="#000000"/>
 
  </LinearLayout>   
--->
+
     <LinearLayout
         android:id="@+id/llButtonHorizontal"
         android:layout_width="wrap_content"

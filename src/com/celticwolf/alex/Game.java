@@ -17,9 +17,12 @@ import android.os.Bundle;
 import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.ListAdapter;
+import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
@@ -30,6 +33,9 @@ import com.actionbarsherlock.view.MenuItem;
 import com.google.ads.AdRequest;
 import com.google.ads.AdView;
 import com.google.android.apps.analytics.GoogleAnalyticsTracker;
+
+import de.madvertise.android.sdk.MadvertiseTracker;
+import de.madvertise.android.sdk.MadvertiseView;
 
 public class Game extends SherlockActivity implements View.OnClickListener {
 
@@ -80,12 +86,17 @@ public class Game extends SherlockActivity implements View.OnClickListener {
 
 	Bitmap ball;
 	int x, y;
+	
+	private MadvertiseTracker mTracker;
+
+    private MadvertiseView mMadView;
 
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.game);
+		  mMadView = (MadvertiseView) findViewById(R.id.madad);
 
 		getDatabase();
 		getStrings();
@@ -98,6 +109,16 @@ public class Game extends SherlockActivity implements View.OnClickListener {
 	}
 
 	private void loadAd() {
+		 // set gender and age of your user.
+        MadvertiseView.setAge("20-26");
+        MadvertiseView.setGender(MadvertiseView.GENDER_FEMALE);
+        // Retrieve a new instance of the a MadvertiseTracker
+        mTracker = MadvertiseTracker.getInstance(this);
+
+
+        
+      
+/*
 		//request TEST ads to avoid being disabled for clicking your own ads
         AdRequest adRequest = new AdRequest();
  
@@ -113,10 +134,11 @@ public class Game extends SherlockActivity implements View.OnClickListener {
         // You can keep this even when you release your app on the market, because
         // only emulators and your test device will get test ads. The user will receive real ads.
         adView.loadAd(adRequest);
+        */
 		
 	}
 	
-	private void checkAd(int Score) {
+	/*private void checkAd(int Score) {
 		if(Score >= adKill ){
 
 			View admobAds = (View) findViewById(R.id.adMob);
@@ -126,7 +148,7 @@ public class Game extends SherlockActivity implements View.OnClickListener {
 		
 		
 		
-	}
+	}*/
 
 	private void getStrings() {
 		txthighscore = getResources().getString(R.string.txthighscore);
@@ -246,7 +268,7 @@ public class Game extends SherlockActivity implements View.OnClickListener {
 	private void sethighscore() {
 		if (drinkcount >= highscore) {
 			highscore = drinkcount;
-			checkAd(drinkcount);
+			//checkAd(drinkcount);
 		}
 	}
 
