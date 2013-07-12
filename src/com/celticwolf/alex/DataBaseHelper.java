@@ -321,9 +321,22 @@ public class DataBaseHelper extends SQLiteOpenHelper {
 
 	}
 	
-	public void downloadDatabase(String sUrl){
+	private void downloadDatabase(String sUrl){
 		DownloadWebPageTask task = new DownloadWebPageTask();
 		task.execute(new String[] { sUrl });
+	}
+	
+	public void updateDatabase() throws IOException {
+		try {
+
+			copyDataBase();
+
+		} catch (IOException e) {
+			
+			throw new Error("Error copying database");
+
+		}
+		
 	}
 
 	// Add your public helper methods to access and get content from the

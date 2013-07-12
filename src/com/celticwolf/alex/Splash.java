@@ -4,8 +4,10 @@ import android.app.Activity;
 import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.widget.TextView;
 
 public class Splash extends Activity{
+	Boolean DB_isCreated = false;
 	MediaPlayer ourSong = new MediaPlayer();
 	@Override
 	protected void onCreate(Bundle TravisLoveBacon) {
@@ -14,6 +16,7 @@ public class Splash extends Activity{
 		setContentView(R.layout.splash);
 		ourSong = MediaPlayer.create(Splash.this, R.raw.bottleopen);
 		ourSong.start();
+
 		Thread timer = new Thread(){
 			public void run(){
 				try{
@@ -23,11 +26,14 @@ public class Splash extends Activity{
 				}finally{
 					Intent openStartingPoint  = new Intent("com.celticwolf.alex.MENU");
 					startActivity(openStartingPoint);
+					
 				}
 			}
 		};
 		timer.start();
+		
 	}
+
 
 	@Override
 	protected void onPause() {

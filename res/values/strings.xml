@@ -38,8 +38,10 @@
     <string name="ac_double">Double</string>
     <string name="ar_voteback">Join the official Beer or no Beer Facebook Fanpage to send new beerbrands and share your thoughts!</string>
     <string name="ar_votetitle">Join the official Beer or no Beer Fanpage!</string>
-    <string name="ar_rateback">Ok!</string>
+    <string name="ar_rateback">OK!</string>
     <string name="brandcomment">Comment :</string>
+    <string name="sp_empty"> </string>
+    <string name="sb_updatedatabase">Update Database</string>
     
     
 </resources>

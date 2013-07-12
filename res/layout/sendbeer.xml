@@ -103,6 +103,14 @@
       android:textStyle="bold"
       android:text="@string/send"
        />
+  <Button 
+       android:id="@+id/bUpdate"
+       android:layout_width="200dp"
+      android:layout_height="wrap_content"
+      android:layout_gravity="center"
+      android:textStyle="bold"
+      android:text="@string/sb_updatedatabase"
+       />
    
 </LinearLayout>
 </ScrollView>

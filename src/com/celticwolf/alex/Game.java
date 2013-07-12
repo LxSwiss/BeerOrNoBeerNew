@@ -71,7 +71,6 @@ public class Game extends SherlockActivity implements View.OnClickListener {
 	final int drinkfactor_half = 1;
 	final int drinkfactor_normal = 2;
 	final int drinkfactor_double = 3;
-	private final int adKill = 9;
 	int drinkfactor = drinkfactor_normal;
 	int selectedBeer;
 	String anybeer;
@@ -109,12 +108,8 @@ public class Game extends SherlockActivity implements View.OnClickListener {
 	}
 
 	private void loadAd() {
-		 // set gender and age of your user.
-        MadvertiseView.setAge("20-26");
-        MadvertiseView.setGender(MadvertiseView.GENDER_FEMALE);
-        // Retrieve a new instance of the a MadvertiseTracker
         mTracker = MadvertiseTracker.getInstance(this);
-
+        mMadView.setEnabled(true);
 
         
       
@@ -694,7 +689,7 @@ public class Game extends SherlockActivity implements View.OnClickListener {
 			return true;
 			
 		case android.R.id.home:
-			Intent intent = new Intent(this, com.celticwolf.alex.Menu.class);
+			Intent intent = new Intent(this, com.celticwolf.alex.MenuView.class);
             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
             startActivity(intent);
             return true;

@@ -18,7 +18,6 @@ import android.util.Log;
 		      String response = "";
 		      String DB_PATH = "/data/data/com.celticwolf.alex/databases/";
 		      String DB_NAME = "sqlbeerlist.sqlite";
-		      String outFileName = DB_PATH + DB_NAME;
 		     
 		  	try {
 		  		URL url = new URL(urls[0]);

@@ -1,6 +1,8 @@
 package com.celticwolf.alex;
 
 
+import java.io.IOException;
+
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -19,7 +21,7 @@ public class SendBrand  extends SherlockActivity implements View.OnClickListener
 	
 	EditText brandname, country, brandcomment;
 	String sbrandname, scountry, sbrandcomment, radiobool;
-	Button sendBrand;
+	Button sendBrand, updateDB;
 	RadioButton realbrand, fakebrand;
 
 	@Override
@@ -35,12 +37,14 @@ public class SendBrand  extends SherlockActivity implements View.OnClickListener
 		country = (EditText) findViewById(R.id.etBrandCountry);
 		brandcomment = (EditText) findViewById(R.id.etBrandComment);
 		sendBrand = (Button) findViewById(R.id.bSend);
+		updateDB = (Button) findViewById(R.id.bUpdate);
 		realbrand = (RadioButton)findViewById(R.id.rbRealBrand);
 		fakebrand = (RadioButton)findViewById(R.id.rbFakeBrand);
 		
 		sendBrand.setOnClickListener(this);
 		realbrand.setOnClickListener(this);
 		fakebrand.setOnClickListener(this);
+		updateDB.setOnClickListener(this);
 		realbrand.setChecked(true);
 		
 		int duration = Toast.LENGTH_SHORT;
@@ -66,7 +70,34 @@ public class SendBrand  extends SherlockActivity implements View.OnClickListener
 		} else if (v.getId() == R.id.bSend) {
 			setRadioBtton();
 			shareonfb();
-			//convertEditTextvars();
+		} else if (v.getId() == R.id.bUpdate){
+			updateDataBase();
+		}
+	}
+
+	private void updateDataBase() {
+		// TODO Auto-generated method stub
+		DataBaseHelper myDbHelper = new DataBaseHelper(null);
+		myDbHelper = new DataBaseHelper(this);
+		try {
+			myDbHelper.updateDatabase();
+			int duration = Toast.LENGTH_SHORT;
+			Toast toast = Toast
+					.makeText(this,
+							"Done!",
+							duration);
+			toast.setGravity(Gravity.CENTER, 0, 0);
+			toast.show();
+		} catch (IOException ioe) {
+			int duration = Toast.LENGTH_SHORT;
+			Toast toast = Toast
+					.makeText(
+							this,
+							"Unable to create database",
+							duration);
+			toast.setGravity(Gravity.CENTER, 0, 0);
+			toast.show();
+			throw new Error("Unable to create database");
 		}
 	}
 
@@ -89,7 +120,7 @@ public class SendBrand  extends SherlockActivity implements View.OnClickListener
 	public boolean onOptionsItemSelected(MenuItem item) {
 		switch (item.getItemId()) {
 		case android.R.id.home:
-			Intent intent = new Intent(this, com.celticwolf.alex.Menu.class);
+			Intent intent = new Intent(this, com.celticwolf.alex.MenuView.class);
 	        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
 	        startActivity(intent);
 	        return true;

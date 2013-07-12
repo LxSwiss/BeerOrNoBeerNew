@@ -6,14 +6,17 @@ import java.io.IOException;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 import com.actionbarsherlock.app.SherlockActivity;
+import com.actionbarsherlock.view.Menu;
 import com.actionbarsherlock.view.MenuInflater;
 import com.actionbarsherlock.view.MenuItem;
 
-public class Menu extends SherlockActivity implements View.OnClickListener{
+public class MenuView extends SherlockActivity implements View.OnClickListener{
 	
 	Button start,  about, sendbeer, banner;
 	
@@ -93,6 +96,7 @@ public void sendbeer(){
 	    super.onDestroy();
 	  }
 
+	 @Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		MenuInflater inflater = getSupportMenuInflater();
 		inflater.inflate(R.menu.short_menu, (com.actionbarsherlock.view.Menu) menu);
@@ -125,6 +129,7 @@ public void sendbeer(){
 		Intent i = new Intent(Intent.ACTION_VIEW);
 		i.setData(Uri.parse(url));
 		startActivity(i);
+		
 	}
 	
 }
