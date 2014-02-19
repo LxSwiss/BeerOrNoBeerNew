@@ -1575,7 +1575,8 @@ containing a value of this type.
         public static final int hello=0x7f060026;
         public static final int infotoast=0x7f06002f;
         public static final int realbeer=0x7f060036;
-        public static final int right=0x7f060052;
+        public static final int right=0x7f060053;
+        public static final int sb_updatedatabase=0x7f060052;
         public static final int send=0x7f06003b;
         public static final int sendbeerbrand=0x7f060033;
         public static final int sendbeerend=0x7f06003a;
